@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-rails'
+Bundle 'scrooloose/nerdtree'
 
 " Required by Vundle
 filetype plugin indent on
