@@ -14,6 +14,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/nerdtree'
+Bundle 'msanders/snipmate.vim'
 
 " Required by Vundle
 filetype plugin indent on
