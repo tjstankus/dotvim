@@ -15,12 +15,13 @@ Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
+Bundle 'vim-scripts/vimwiki'
+Bundle 'tpope/vim-markdown'
 
-" Required by Vundle
+
+" Required by Vundle, vimwiki
 filetype plugin indent on
-
-" Remap ;; to ESC for easier mode toggling.
-:imap jj <Esc>
+syntax on
 
 set modelines=0
 
@@ -48,9 +49,18 @@ set nowrap
 " Make backspace/delete work as expected
 set backspace=indent,eol,start
 
+" Indent to the same level as the previous line
+set autoindent
+
 " Splits
 " Open a new vertical split and switch to it with ,w
 noremap <leader>w <C-w>v<C-w>l
+
+" Snippets plugin
+let g:snippets_dir="~/.vim/bundle/snipmate.vim/snippets/,~/.vim/snippets/"
+
+" Vimwiki
+let g:vimwiki_list = [{'path': '~/Dropbox/vimwki'}]
 
 " Colors
 syntax enable
