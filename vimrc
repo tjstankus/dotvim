@@ -1,27 +1,13 @@
-" Many settings culled from http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+" Pathogen
+" https://github.com/tpope/vim-pathogen
+call pathogen#infect()
+syntax on
+filetype plugin indent on
 
 " Disable vi compatibility
 set nocompatible
 
-" Vundle
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
-" My bundles go here
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'mileszs/ack.vim'
-Bundle 'tpope/vim-rails'
-Bundle 'scrooloose/nerdtree'
-Bundle 'msanders/snipmate.vim'
-Bundle 'vim-scripts/vimwiki'
-Bundle 'tpope/vim-markdown'
-
-
-" Required by Vundle, vimwiki
-filetype plugin indent on
-syntax on
+" Many settings culled from http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 
 set modelines=0
 
@@ -62,9 +48,27 @@ let g:snippets_dir="~/.vim/bundle/snipmate.vim/snippets/,~/.vim/snippets/"
 " Vimwiki
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwki'}]
 
+" Folding
+" http://smartic.us/2009/04/06/code-folding-in-vim/
+" fold based on indent
+set foldmethod=indent
+" deepest fold is 10 levels
+set foldnestmax=10
+" dont fold by default
+set nofoldenable
+" not sure what this setting does
+set foldlevel=1
+
+" Highlight trailing whitespace
+match Todo /\s\+$/
+
 " Colors
 syntax enable
-set background=light
+if has('gui_running')
+  set background=dark
+else
+  set background=light
+endif
 " let g:solarized_termcolors = 256 
 " let g:solarized_visibility = "high" 
 " let g:solarized_contrast = "high"
