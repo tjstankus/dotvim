@@ -14,6 +14,9 @@ set modelines=0
 " Map leader to ,
 let mapleader = ","
 
+" Map ; to : so that ;w will save, for example
+nnoremap ; :
+
 " More info at http://vimcasts.org/episodes/tabs-and-spaces/
 set tabstop=2
 set shiftwidth=2
@@ -61,6 +64,9 @@ set foldlevel=1
 
 " Highlight trailing whitespace
 match Todo /\s\+$/
+
+" Strip trailing whitespace in the current file
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Colors
 syntax enable
