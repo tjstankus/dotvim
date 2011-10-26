@@ -70,12 +70,9 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Colors
 syntax enable
+colorscheme solarized
 if has('gui_running')
   set background=dark
 else
   set background=light
 endif
-" let g:solarized_termcolors = 256 
-" let g:solarized_visibility = "high" 
-" let g:solarized_contrast = "high"
-colorscheme solarized
