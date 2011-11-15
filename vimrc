@@ -23,6 +23,11 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" Search is case-insensitive when only lowercase used, becomes
+" case-sensitive when an uppercase letter is used.
+set ignorecase
+set smartcase
+
 " Line numbers relative to current line
 set relativenumber
 
