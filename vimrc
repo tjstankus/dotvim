@@ -1,7 +1,8 @@
 " Pathogen
 " https://github.com/tpope/vim-pathogen
 call pathogen#infect()
-syntax on
+" The pathogen README calls for `syntax on` but trying `enable` for flexibility
+syntax enable
 filetype plugin indent on
 
 " Disable vi compatibility
@@ -15,7 +16,8 @@ set modelines=0
 let mapleader = ","
 
 " Map ; to : so that ;w will save, for example
-nnoremap ; :
+" Taking this out for now, in favor of using builtin keys.
+" nnoremap ; :
 
 " More info at http://vimcasts.org/episodes/tabs-and-spaces/
 set tabstop=2
@@ -70,12 +72,11 @@ set foldlevel=1
 " Highlight trailing whitespace
 match Todo /\s\+$/
 
-" Strip trailing whitespace in the current file
+" Strip trailing whitespace in the current file with ,W
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Colors
-syntax enable
-colorscheme solarized
+colorscheme twilight
 if has('gui_running')
   set background=dark
 else
