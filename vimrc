@@ -75,10 +75,18 @@ match Todo /\s\+$/
 " Strip trailing whitespace in the current file with ,W
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
+" Change cursor shape in insert mode
+" iTerm-specific
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 " Colors
-colorscheme twilight
-if has('gui_running')
-  set background=dark
-else
-  set background=light
-endif
+colorscheme solarized
+set background=dark
+" if has('gui_running')
+"   colorscheme solarized
+"   set background=dark
+" else
+"   colorscheme solarized
+"   set background=dark
+" endif
